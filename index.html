@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- daisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/b7f823b944.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body class="container mx-auto px-2 mt-5  lg:mt-12  border-[#17171733]">
+    <header class="grid justify-center md:flex md:justify-between border-b-[1px] lg:pb-8 items-center">
+        <div class="flex justify-center mb-4">
+            <img class="scale-75 lg:scale-none" src="images/Logo.png" alt="logo">
+        </div>
+        <div class="flex justify-center order-1 md:order-none  text-center  my-4">
+            <button id="sortButton" class="bg-[#25252533] py-3 px-5 rounded text-lg font-semibold">sort by view</button>
+        </div>
+        <div class="flex justify-center text-end  ">
+            <button id="blogBtn" class="py-3 px-5 rounded text-lg font-medium text-white bg-[#FF1F3D]">Blog</button>
+        </div>
+    </header>
+    <main class="relative">
+        <!-- button container -->
+        <section id="button_Container" class="flex justify-center gap-6 mt-8 mb-10 flex-wrap">
+        </section>
+
+        <!-- blog section -->
+        <section id="addBlogBtn" class="absolute px-3 scale-95 md:scale-100 hidden top-[-1%] md:top-[-3%] right-0 w-full z-20 ">
+            <div class="bg-[#cccaca] py-10 lg:py-20 px-5 lg:px-10 relative">
+                <div class="collapse bg-base-200 rounded-sm mb-5 ">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-xl font-medium">
+                        Discuss the scope of var, let, and const
+                    </div>
+                    <div class="collapse-content">
+                        <p><span class="font-bold">var</span>: var is a functional scope,var can be re-declared and
+                            re-assign, if we use var then the project will cause problems </p>
+                        <p><span class="font-bold">let</span>: let is a global scope variable, let can be re-assign but
+                           let can't re-declared </p>
+                        <p><span class="font-bold">const</span>: const is a also global scope variable, but const can't' re-assign and
+                            can't' re-declared </p>
+                    </div>
+                </div>
+                <div class="collapse bg-base-200 rounded-sm mb-5 ">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-xl font-medium">
+                        Tell us the use cases of null and undefined
+                    </div>
+                    <div class="collapse-content">
+                        <p> <span class="font-bold">Null:</span>
+                            If we think we will need a valve at some point later. Then we can define null, and add value
+                            to it <br>
+                            <span class="font-bold">undefined:</span>
+                            Returns undefined if not returned to the function.
+                            Returns undefined if no value is found
+                        </p>
+                    </div>
+                </div>
+                <div class="collapse bg-base-200 rounded-sm mb-5 ">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-xl font-medium">
+                        What do you mean by REST API? 
+                    </div>
+                    <div class="collapse-content">
+                        <p>REST API is Application programming interface, api exchange information securely over the internet.</p>
+                    </div>
+                </div>
+                <div id="closeBlog"
+                    class="h-12 absolute left-[-23px] top-[-23px] w-12 cursor-pointer rounded-full bg-[#FF1F3D]">
+                    <i
+                        class="absolute left-[50%] text-white top-[50%] translate-x-[-50%] translate-y-[-50%] fa-solid fa-xmark text-3xl"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- No content alert show -->
+        <section id="no_ContentContainer" class="text-center my-32 hidden">
+            <div class=" flex justify-center mb-8">
+                <img src="images/Icon.png" alt="alert">
+            </div>
+            <h3 class="text-4xl font-bold text-center">Oops!! Sorry, There is no content here</h3>
+        </section>
+
+        <!-- item container -->
+        <section id="singleItem_Container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+           
+        </section>
+    </main>
+    <!-- javaScript -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

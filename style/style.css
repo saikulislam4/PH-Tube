@@ -1,0 +1,15 @@
+/* inter google font  */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+.btnActive{
+    color: white !important;
+    background: #FF1F3D !important ;
+}
+.post_date{
+    background: #171717;
+    padding: 4px 5px;
+    border-radius: 4px;
+}
